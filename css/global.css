@@ -1,0 +1,182 @@
+/*reset*/
+
+html {
+    font-size: 10px;
+}
+html,
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+form,
+input,
+select,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+h1,
+h2,
+input,
+textarea,
+select {
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+ul,
+dl,
+ol {
+    list-style: none;
+}
+
+img,
+input {
+    border: none;
+}
+
+input {
+    outline: none;
+    background: transparent;
+    vertical-align: top;
+}
+
+textarea {
+    word-wrap: break-word;
+    resize: none;
+}
+
+input,
+textarea,
+select {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: #C4C4C4;
+}
+
+::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+::-ms-check {
+    display: none;
+}
+
+body {
+    -webkit-text-size-adjust: none!important;
+    font-family: "Helvetica";
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #141414;
+    background-color: #FFF;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: none;
+    height: 100%;
+    background-color: #2d2f31;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a,
+input {
+    -webkit-touch-callout: none;
+}
+
+
+/*公共样式*/
+
+.hide {
+    display: none !important;
+}
+
+
+/* footer style 脚部样式 */
+
+.container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+
+.box-vol {
+    padding-bottom: 24px;
+    /*高度等于footer的高度*/
+}
+
+footer {
+    position: relative;
+    margin-top: -24px;
+    /*等于footer的高度*/
+    height: 24px;
+    clear: both;
+    font-size: 1.1rem;
+    color: #d0d3d2;
+    padding:0 1.5rem;
+    opacity: .2;
+}
+
+
+/*子页面样式*/
+
+.box-vol {
+    padding: 1.5rem;
+    color: #d0d3d2;
+}
+
+.box-vol h1 {
+    font-size: 1.8rem;
+    padding: 1.5rem .5rem;
+    background-color: #2b9884;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.box-vol h2 {
+    font-size: 1.6rem;
+    padding: 1rem;
+    font-weight: 400;
+}
+
+.box-vol .content .box-test {
+    background-color: #2f3439;
+    padding: 1rem .5rem;
+    margin-bottom: 20px;
+}
+
+.box-coding {}

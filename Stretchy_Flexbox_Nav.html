@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <title>弹性拉伸</title>
+    <style type="text/css">
+    .main-nav > ul {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main-nav > ul > li {
+        flex: 1;
+        position: relative;
+    }
+    
+    .main-nav > ul > li a {
+        color: #d0d3d2;
+        font-size: 1.5rem;
+    }
+    
+    .submenu {
+        max-height: 0;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    
+    .submenu.open {
+        max-height: 200px;
+        /* non-ideal magic number */
+    }
+    .submenu-toggle-button{
+        position: absolute;
+        left:82px;
+        top:-2px;
+    }
+    .nav-list > li{
+        line-height: 24px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <article class="box-vol">
+            <!-- 标题 s -->
+            <h1>【Vol.4】自定义字体文字</h1>
+            <!-- 标题 e -->
+            <!-- 内容 s -->
+            <div class="content">
+                <div class="box-test">
+                    <!-- 
+                    demo code start 
+                    -->
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="">1 重构笔记</a></li>
+                            <li>
+                                <button class="submenu-toggle-button">+</button>
+                                <a href="">2 重构笔记</a>
+                                <ul class="submenu nav-list">
+                                    <li><a href="">Lorem ipsum.</a></li>
+                                    <li><a href="">Culpa, qui!</a></li>
+                                    <li><a href="">Repudiandae, eaque.</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">3 重构笔记</a></li>
+                            <li><a href="">4 重构笔记</a></li>
+                            <!-- etc -->
+                        </ul>
+                    </nav>
+                    <!-- 
+                    demo code end 
+                    -->
+                </div>
+            </div>
+            <!-- 内容 e -->
+        </article>
+    </div>
+    <footer>
+        Copyright © 2016 By cssnote. All Rights Reserved.
+    </footer>
+    <script type="text/javascript">
+    var buttons = document.querySelectorAll('.submenu-toggle-button');
+
+    [].forEach.call(buttons, function(button) {
+        button.addEventListener('click', function() {
+            var submenu = button.parentNode.querySelector('.submenu');
+            submenu.classList.toggle('open');
+        });
+    });
+    </script>
+</body>
+
+</html>
+
+<!-- https://css-tricks.com/squeezy-stretchy-flexbox-nav/ -->
